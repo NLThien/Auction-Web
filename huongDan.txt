@@ -17,3 +17,45 @@ Hoặc có thông báo sau building: " Now listening on: ...... (giữ Ctrl và 
 
 Chỉnh sửa:
 
+Thêm bớt các file cshtml trong folder Pages
+
+------------------------------------------------------------------
+
+Git:
+
+Mở terminal(Ctrl + `[trên phím Tab])
+
+chuyển vào thư mục dự án(nếu chưa): cd AuctionWebApp | muốn lùi lại cd ..
+
+kiểm tra remote(đích đến của commit):
+git remote -V
+hiện thị tên và đường dẫn của repository để lấy dữ liệu (fecth) và đẩy dữ liệu (push)
+
+Thêm remote: git remote add Auction-Web https://github.com/your-username/Auction-Web.git
+
+đổi remote: git remote set-url origin https://github.com/NLThien/Auction-Web.git
+
+đẩy code: git push -u origin <tên-branch> tên branch có thể phụ thuộc vào branch của bạn
+
+kiểm tra commit: git log
+kiểm tra commit trên nhánh cụ thể: git log <tên branch> VD: git log main/someone1
+
+tạo branch:
+git branch <tên-branch>
+
+tạo và chuyển qua branch đó(lệnh commit được dùng cho branch đó luôn)
+git checkout -b <tên-branch>
+
+sau khi sửa file trên nhánh:
+*đưa code vào hàng chờ(staging area[chưa có thay đổi trên nhánh chính]):
+lưu thay đổi toàn bộ file vào staging area: git add .
+chỉ thay đổi một số file: git add <tên file> ... <tên file n>
+
+Loại bỏ thay đổi đã thêm ra khỏi staging area: git reset
+
+kiểm tra trạng thái tại của các file trong working directory, staging area và repository:
+git status
+
+Commit code: git commit -m <lời nhắn>
+
+Đưa commit lên repository: git push
