@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Web Component</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+            <h1 class="text-3xl font-bold mb-6 text-center text-indigo-600">Luxury Watch Auction</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="product-info">
+                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" alt="Luxury Watch" class="w-full h-64 object-cover rounded-lg mb-4">
+                    <h2 class="text-2xl font-semibold mb-2">Rolex Submariner</h2>
+                    <p class="text-gray-600 mb-4">Elegant timepiece with precision craftsmanship</p>
+                    <div class="mb-4">
+                        <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
+                        <select id="category" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                            <option>Luxury Watches</option>
+                            <option>Jewelry</option>
+                            <option>Collectibles</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="description" class="block text-sm font-medium text-gray-700">Detailed Description</label>
+                        <textarea id="description" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Enter detailed product description"></textarea>
+                    </div>
+                </div>
+                
+                <div class="bidding-section">
+                    <div class="bg-indigo-100 rounded-lg p-4 mb-6">
+                        <h3 class="text-lg font-semibold mb-2">Current Highest Bid</h3>
+                        <p class="text-3xl font-bold text-indigo-600">$15,500</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="bid-amount" class="block text-sm font-medium text-gray-700">Your Bid Amount ($)</label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <span class="text-gray-500 sm:text-sm">$</span>
+                            </div>
+                            <input type="number" name="bid-amount" id="bid-amount" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="0.00" aria-describedby="bid-currency">
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                <span class="text-gray-500 sm:text-sm" id="bid-currency">USD</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">Place Bid</button>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-lg font-semibold mb-2">Bidding History</h3>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between items-center bg-gray-50 p-2 rounded">
+                                <span class="font-medium">User123</span>
+                                <span class="text-indigo-600 font-semibold">$15,500</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-gray-50 p-2 rounded">
+                                <span class="font-medium">BidMaster</span>
+                                <span class="text-indigo-600 font-semibold">$15,000</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-gray-50 p-2 rounded">
+                                <span class="font-medium">WatchLover</span>
+                                <span class="text-indigo-600 font-semibold">$14,500</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <h3 class="text-lg font-semibold mb-2">Time Remaining</h3>
+                <div class="text-4xl font-bold text-indigo-600" id="countdown">23:59:59</div>
+                <p class="mt-2 text-green-600 font-semibold">Auction Status: Active</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Countdown Timer Logic
+        function updateCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let time = countdownElement.innerText;
+            let [hours, minutes, seconds] = time.split(':').map(Number);
+            
+            if (seconds > 0) {
+                seconds--;
+            } else if (minutes > 0) {
+                minutes--;
+                seconds = 59;
+            } else if (hours > 0) {
+                hours--;
+                minutes = 59;
+                seconds = 59;
+            }
+            
+            countdownElement.innerText = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        
+        // Bid Validation
+        const bidInput = document.getElementById('bid-amount');
+        const placeBidButton = document.querySelector('button');
+        
+        bidInput.addEventListener('input', function() {
+            const currentBid = 15500;
+            const newBid = parseFloat(this.value);
+            
+            if (newBid <= currentBid) {
+                this.classList.add('border-red-500');
+                placeBidButton.disabled = true;
+                placeBidButton.classList.add('opacity-50', 'cursor-not-allowed');
+            } else {
+                this.classList.remove('border-red-500');
+                placeBidButton.disabled = false;
+                placeBidButton.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+        
+        placeBidButton.addEventListener('click', function() {
+            alert('Bid placed successfully!');
+        });
+    </script>
+</body>
+</html>

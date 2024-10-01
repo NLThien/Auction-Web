@@ -43,7 +43,7 @@ kiểm tra commit trên nhánh cụ thể: git log <tên branch> VD: git log mai
 tạo branch:
 git branch <tên-branch>
 
-tạo và chuyển qua branch đó(lệnh commit được dùng cho branch đó luôn)
+Chuyển qua branch đó(lệnh commit được dùng cho branch đó luôn)
 git checkout -b <tên-branch>
 
 sau khi sửa file trên nhánh:
@@ -58,4 +58,5 @@ git status
 
 Commit code: git commit -m <lời nhắn>
 
-Đưa commit lên repository: git push
+Đưa commit lên repository: git push (đưa lên remote hiện tại (check bằng git remote -v))
+Đưa commit lên branch cụ thể: git push -u origin <tên branch>

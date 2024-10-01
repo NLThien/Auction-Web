@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Auction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">AuctionWeb</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">Categories</a></li>
+                    <li><a href="#" class="hover:underline">My Bids</a></li>
+                    <li><a href="#" class="hover:underline">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <div class="mb-8">
+            <input type="text" placeholder="Search for items..." class="w-full p-2 border border-gray-300 rounded-lg" aria-label="Search for items">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Luxury Watch" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Luxury Watch</h2>
+                    <p class="text-gray-600 mb-4">Elegant timepiece with intricate detailing</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold">Current Bid: $1,500</span>
+                        <span class="text-sm text-gray-500" id="timer1">2h 30m 15s</span>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="number" placeholder="Your bid" class="flex-grow p-2 border border-gray-300 rounded-l-lg" aria-label="Enter your bid amount">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-r-lg hover:bg-green-600 transition duration-300">Place Bid</button>
+                    </div>
+                    <p class="text-red-500 text-sm mt-2 hidden" id="error1" role="alert"></p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd" alt="Antique Vase" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Antique Vase</h2>
+                    <p class="text-gray-600 mb-4">Rare 18th century porcelain vase</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold">Current Bid: $3,200</span>
+                        <span class="text-sm text-gray-500" id="timer2">1h 45m 30s</span>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="number" placeholder="Your bid" class="flex-grow p-2 border border-gray-300 rounded-l-lg" aria-label="Enter your bid amount">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-r-lg hover:bg-green-600 transition duration-300">Place Bid</button>
+                    </div>
+                    <p class="text-red-500 text-sm mt-2 hidden" id="error2" role="alert"></p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1605170439002-90845e8c0137" alt="Vintage Camera" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold mb-2">Vintage Camera</h2>
+                    <p class="text-gray-600 mb-4">Classic 1960s film camera in excellent condition</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-lg font-bold">Current Bid: $800</span>
+                        <span class="text-sm text-gray-500" id="timer3">3h 15m 45s</span>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="number" placeholder="Your bid" class="flex-grow p-2 border border-gray-300 rounded-l-lg" aria-label="Enter your bid amount">
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-r-lg hover:bg-green-600 transition duration-300">Place Bid</button>
+                    </div>
+                    <p class="text-red-500 text-sm mt-2 hidden" id="error3" role="alert"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12 py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 AuctionWeb. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
