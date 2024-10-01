@@ -1,0 +1,19 @@
+Chạy ứng dụng:
+Mở terminal( Ctrl + ` )_trên nút Tab
+
+chuyển vào thư mục dự án(chứa nội dung code):
+
+cd MyWebApp
+
+chạy lệnh dưới:
+
+dotnet run
+
+Mở trình duyệt web và truy cập: http://localhost:5000 (thông thường là vậy)
+
+Hoặc có thông báo sau building: " Now listening on: ...... (giữ Ctrl và click chuột để truy cập App)
+
+--------------------------------------------------------------------
+
+Chỉnh sửa:
+
