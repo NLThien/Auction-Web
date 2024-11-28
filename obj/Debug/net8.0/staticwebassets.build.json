@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cjjLFbY4xv5TkitQ5yfGDOPg7j8k9/duGYAUsFohqD8=",
+  "Hash": "BNossi6R+K4/zyQs+mkSqPMo9CHH5TqaT4DRwdYT/Q0=",
   "Source": "AuctionWebApp",
   "BasePath": "_content/AuctionWebApp",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "F:\\nam3\\ky1\\lapTrinhMang\\auctionWeb\\AuctionWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AuctionWebApp.bundle.scp.css"
+    },
+    {
+      "Identity": "F:\\nam3\\ky1\\lapTrinhMang\\auctionWeb\\AuctionWebApp\\wwwroot\\css\\index.css",
+      "SourceId": "AuctionWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\nam3\\ky1\\lapTrinhMang\\auctionWeb\\AuctionWebApp\\wwwroot\\",
+      "BasePath": "_content/AuctionWebApp",
+      "RelativePath": "css/index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\index.css"
     },
     {
       "Identity": "F:\\nam3\\ky1\\lapTrinhMang\\auctionWeb\\AuctionWebApp\\wwwroot\\css\\site.css",

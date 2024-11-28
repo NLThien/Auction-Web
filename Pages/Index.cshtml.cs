@@ -1,10 +1,11 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace MyWebApp.Pages;
+namespace AuctionWeb.Pages;
 
 public class IndexModel : PageModel
 {
+    
+    public List<string>? DataList { get; set; } // create list to test data in database
     private readonly ILogger<IndexModel> _logger;
 
     public IndexModel(ILogger<IndexModel> logger)
@@ -14,6 +15,11 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
+        // Lấy dữ liệu người dùng từ cơ sở dữ liệu để hiển thị trên trang
+    }
 
+    public void OnPost(User user)
+    {
+        // Lưu dữ liệu người dùng vào cơ sở dữ liệu khi người dùng nhấn nút "Submit"
     }
 }

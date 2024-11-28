@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "V3xdVij5EVA=",
+  "dgSpecHash": "zsbKafyDvpw=",
   "success": true,
   "projectFilePath": "F:\\nam3\\ky1\\lapTrinhMang\\auctionWeb\\AuctionWebApp\\AuctionWebApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlite\\9.0.0\\microsoft.data.sqlite.9.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.0\\microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

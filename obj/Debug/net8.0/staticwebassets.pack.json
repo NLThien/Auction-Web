@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\AuctionWebApp.bundle.scp.css"
     },
     {
+      "Id": "F:\\nam3\\ky1\\lapTrinhMang\\auctionWeb\\AuctionWebApp\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
       "Id": "F:\\nam3\\ky1\\lapTrinhMang\\auctionWeb\\AuctionWebApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

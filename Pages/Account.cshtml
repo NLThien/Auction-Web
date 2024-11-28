@@ -1,0 +1,25 @@
+@page
+@model AccountModel
+
+@{
+    ViewData["Title"] = "Thông tin tài khoản";
+}
+
+<h2>Thông tin tài khoản</h2>
+
+@if (Model.currentUser != null)
+{
+    <div>
+        <p><strong>Name:</strong> @Model.currentUser.Name</p>
+        <p><strong>Name Account:</strong> @Model.currentUser.NameAccount</p>
+        <p><strong>Email:</strong> @Model.currentUser.Email</p>
+        <p><strong>Number phone:</strong> @Model.currentUser.PhoneNumber</p>
+        <p><strong>Address:</strong> @Model.currentUser.Address</p>
+        <p><strong>Số dư:</strong> @Model.currentUser.Balance</p>
+        <p><strong>Gender:</strong> @Model.currentUser.Gender</p>
+    </div>
+}
+else
+{
+    <p>Không tìm thấy thông tin tài khoản.</p>
+}

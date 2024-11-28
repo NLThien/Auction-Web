@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = F:\nam3\ky1\lapTrinhMang\auctionWeb\AuctionWebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[F:/nam3/ky1/lapTrinhMang/auctionWeb/AuctionWebApp/Pages/Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/nam3/ky1/lapTrinhMang/auctionWeb/AuctionWebApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
